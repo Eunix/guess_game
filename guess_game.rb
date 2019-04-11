@@ -16,10 +16,6 @@ class GuessGame < Sinatra::Base
     @wikipedia = Wikipedia.new
   end
 
-  get '/' do
-    'Test'
-  end
-
   post '/message' do
     participant = params['From']
     body = params['Body']

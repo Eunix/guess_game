@@ -26,12 +26,6 @@ class Wikipedia
 
   private
 
-  def image_url(media_url)
-    response = client.get(media_url)
-    json = JSON.parse(response.body)
-    json['items'].first['original']['source']
-  end
-
   def parse_image_url(json)
     json['thumbnail']['source']
   end
